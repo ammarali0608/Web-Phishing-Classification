@@ -9,14 +9,14 @@
 
 <body>
  <div class="login">
-	<h1>Flower Class Prediction</h1>
+	<h1>Website Phishing Prediction</h1>
 
      <!-- Main Input For Receiving Query to our ML -->
     <form action="{{ url_for('predict')}}"method="post">
         <div id="cols">
 
         </div>
-
+        <br><br>
         <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
     </form>
 
@@ -32,21 +32,16 @@
     div1 = document.getElementById('cols')
     text = ''
     for (let i = 0; i < columns.length; i++) {
-        if(i%5==0)
-            text = text + `<br>`+`\n`
+        if(i%3==0)
+            text = text + `<br><br>`+`\n`
 
-        text = text +`<label for="${columns[i]}"></label>`+ `<input style=" display: inline-block;" class="inp" type="text" name="${columns[i]}" id="${columns[i]}" required="required" />`+`\n`
+        text = text +`<label for="${columns[i]}">${columns[i]}</label>`+ `<input style=" display: inline-block;" class="inp" type="text" name="${columns[i]}" id="${columns[i]}" required="required" />`+`\n`
 
     }
     div1.innerHTML = text
 
 
-    str1  = '48,16,0,1,3,0,0,0,0,0,0,0,4,0,1,0,0,0,0,0,0,0,0,1,0,0,0,0,0,0,0,1,1,0,0,0,1,0,6,0,3,5,3,9,6,5.333333333,5.25,0,0,0,0,0,0,59,0.915254237,0.084745763,0,0,0,0.2,0,0,0,0,100,0,100,0,0,0,0,50,0,0,0,1,1,0,541,3476,4672316,0,0,4'
-    str1 = str1.split(',')
-    inps = document.getElementsByClassName('inp')
-    for (let i = 0; i < inps.length; i++) {
-        inps[i].value = str1[i]
-    }
+
 </script>
 
 
