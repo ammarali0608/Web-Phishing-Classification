@@ -20,7 +20,7 @@ def predict():
 
     features = [np.array(float_features)]
     pred = model.predict(features)
-    if pred == 0:
+    if pred == 1:
         pred = "Phishing"
     else:
         pred = "Safe"
