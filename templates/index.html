@@ -35,7 +35,7 @@
         if(i%5==0)
             text = text + `<br>`+`\n`
 
-        text = text + `<input style=" display: inline-block;" class="inp" type="text" name="${columns[i]}" placeholder="${columns[i]}" required="required" />`+`\n`
+        text = text +`<label for="${columns[i]}"></label>`+ `<input style=" display: inline-block;" class="inp" type="text" name="${columns[i]}" id="${columns[i]}" required="required" />`+`\n`
 
     }
     div1.innerHTML = text
